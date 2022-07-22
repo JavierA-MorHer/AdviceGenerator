@@ -1,0 +1,95 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: hsl(218deg, 23%, 16%);
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-family: "Manrope", sans-serif;
+  margin: 0;
+}
+
+.container {
+  background-color: hsl(217deg, 19%, 24%);
+  width: 500px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 16px;
+}
+
+.title {
+  color: hsl(150deg, 100%, 66%);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.quote {
+  color: hsl(193deg, 38%, 86%);
+  font-size: 28px;
+  font-weight: 800;
+  text-align: center;
+  margin: 25px;
+}
+
+.divisor-mobile {
+  display: none;
+}
+
+.dice {
+  width: 20px;
+}
+
+.dice-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(150deg, 100%, 66%);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  top: 55px;
+}
+.dice-container:hover {
+  box-shadow: 0 0 40px hsl(150deg, 100%, 66%);
+  transition: 0.3s ease-in-out;
+}
+
+@media (max-width: 345px) {
+  .container {
+    width: 95vw;
+    height: auto;
+    padding: 15px;
+  }
+  .quote {
+    margin: 30px 0px 30px 0px;
+  }
+  .dice {
+    width: 30px;
+  }
+  .dice-container {
+    height: 70px;
+    width: 70px;
+    top: 40px;
+  }
+  .divisor-mobile {
+    display: flex;
+  }
+  .divisor-desktop {
+    display: none;
+  }
+}/*# sourceMappingURL=App.css.map */

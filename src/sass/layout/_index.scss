@@ -1,0 +1,83 @@
+@import '../mixins/mediaQuery';
+.container{
+    background-color: $Dark-Grayish-Blue;
+    width: 500px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 16px;
+}
+
+.title{
+    color: $Neon-Green;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.quote{
+    color: $Light-Cyan;
+    font-size: $font-quote;
+    font-weight: $bold;
+    text-align: center;
+    margin: 25px;
+}
+
+.divisor-mobile{
+    display: none;
+}
+
+.dice{
+    width: 20px;
+}
+
+.dice-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:$Neon-Green; 
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    top: 55px;
+    
+
+    &:hover{
+        //Neon efect
+        box-shadow: 0 0 40px $Neon-Green;
+        transition: .3s ease-in-out;
+    }
+}
+
+@include for-phone-only{
+    .container{
+        width: 95vw;
+        height: auto;
+        padding: 15px;
+    }
+
+    .quote{
+        //top rigth bottom left
+        margin: 30px 0px 30px 0px;
+    }
+
+    .dice{
+        width: 30px;
+    }
+    .dice-container{
+        height: 70px;
+        width: 70px;
+        top: 40px;
+    }
+
+    .divisor-mobile{
+        display: flex;
+    }
+    .divisor-desktop{
+        display: none;
+    }
+}
+
